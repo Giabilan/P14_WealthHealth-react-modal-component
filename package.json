@@ -1,0 +1,39 @@
+{
+  "name": "react-modal-component",
+  "version": "1.0.0",
+  "description": "Configurable React modal component",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "vite": "^8.2.0"
+  },
+  "keywords": [
+    "react",
+    "modal",
+    "dialog",
+    "react-modal-component"
+  ],
+  "license": "MIT"
+}
