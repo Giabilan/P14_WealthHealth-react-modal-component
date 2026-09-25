@@ -1,15 +1,39 @@
-# wealthhealth-react-modal
+# wealthhealth-react-modal-oc
 
 Modale React **fonctionnelle** et **configurable**, conçue pour remplacer le plugin jQuery [jquery-modal](https://github.com/kylefox/jquery-modal) dans le projet HRnet (OpenClassrooms P14 — Wealth Health).
 
 Le parent contrôle l’ouverture / la fermeture. Les textes, couleurs et la taille se personnalisent via des **props**.
+
+- **npm :** [wealthhealth-react-modal-oc](https://www.npmjs.com/package/wealthhealth-react-modal-oc)
+- **GitHub :** [P14_WealthHealth-react-modal-component](https://github.com/Giabilan/P14_WealthHealth-react-modal-component)
+
+---
+
+## Prérequis
+
+| Élément | Version / détail |
+|---------|------------------|
+| **Node.js** | ≥ 18 (LTS recommandé, ex. 20 ou 22) |
+| **npm** | ≥ 9 |
+| **React** | ≥ 18 (peer dependency) |
+| **Éditeur recommandé** | [VS Code](https://code.visualstudio.com/) ou [Cursor](https://cursor.com/) |
+| **Tailwind CSS** | Dans l’application hôte (le composant utilise des classes utilitaires pour le layout) |
+
+Avec Tailwind v4 + Vite, scanne le package dans le CSS de l’hôte :
+
+```css
+@import "tailwindcss";
+@source "../node_modules/wealthhealth-react-modal-oc";
+/* ou en local : */
+@source "../../Modal";
+```
 
 ---
 
 ## Installation
 
 ```bash
-npm install wealthhealth-react-modal
+npm install wealthhealth-react-modal-oc
 ```
 
 ### Développement local (avant / hors registry)
@@ -22,26 +46,10 @@ npm install ../Modal
 
 ---
 
-## Prérequis
-
-- React ≥ 18
-- **Tailwind CSS** dans l’application hôte (le composant utilise des classes utilitaires pour le layout)
-
-Avec Tailwind v4 + Vite, scanne le package dans ton CSS :
-
-```css
-@import "tailwindcss";
-@source "../node_modules/wealthhealth-react-modal";
-/* ou en local : */
-@source "../../Modal";
-```
-
----
-
 ## Import
 
 ```jsx
-import Modal from "wealthhealth-react-modal";
+import Modal from "wealthhealth-react-modal-oc";
 ```
 
 ---
@@ -59,8 +67,8 @@ import Modal from "wealthhealth-react-modal";
 | `closeLabel` | `string` | Non | `"Close"` | Label du bouton fermer + `aria-label` du ×. |
 | `overlayColor` | `string` | Non | `"rgba(15, 23, 42, 0.5)"` | Couleur de l’overlay. |
 | `backgroundColor` | `string` | Non | `"#ffffff"` | Fond de la boîte. |
-| `textColor` | `string` | Non | `"#0f172a"` | Couleur du texte / bouton Close. |
-| `accentColor` | `string` | Non | `"#0f766e"` | Accent (titre + bouton Confirm). |
+| `textColor` | `string` | Non | `"#0f172a"` | Couleur du texte. |
+| `accentColor` | `string` | Non | `"#0f766e"` | Accent (boutons / titre). |
 | `size` | `"sm" \| "md" \| "lg"` | Non | `"md"` | Largeur max. |
 
 Couleurs : toute valeur CSS valide (`#hex`, `rgb()`, `rgba()`, noms…).
@@ -119,7 +127,7 @@ Couleurs : toute valeur CSS valide (`#hex`, `rgb()`, `rgba()`, noms…).
 
 ```jsx
 import { useState } from "react";
-import Modal from "wealthhealth-react-modal";
+import Modal from "wealthhealth-react-modal-oc";
 
 const Example = () => {
   const [isOpen, setIsOpen] = useState(false);
